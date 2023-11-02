@@ -10,6 +10,7 @@ const PageHeaderBackground = styled(Box)(({ theme }) =>({
   height: '64px',
   backgroundColor: theme.palette.primary.main,
   display: 'flex',
+  justifyContent: 'space-between',
   alignItems: 'center',
 }))
 
