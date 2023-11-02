@@ -10,6 +10,7 @@ const PageRouterTabs = styled(Tabs)({
   display: 'flex',
   gap: '16px',
   '& .MuiTabs-indicator': {
+    height: '4px',
     backgroundColor: '#90CAF9',
   },
 })
