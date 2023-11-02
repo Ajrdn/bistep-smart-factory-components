@@ -5,10 +5,7 @@ import Tab from '@mui/material/Tab'
 
 
 const PageRouterTabs = styled(Tabs)({
-  width: '704px',
   height: '64px',
-  display: 'flex',
-  gap: '16px',
   '& .MuiTabs-indicator': {
     height: '4px',
     backgroundColor: '#90CAF9',
