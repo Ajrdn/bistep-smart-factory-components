@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
-import PageRouter from './components/PageRouter/PageRouter'
+import PageHeader from './components/PageHeader/PageHeader'
 
 
 const PageBackground = styled(Box)({
@@ -15,7 +15,7 @@ const PageBackground = styled(Box)({
 function App() {
   return (
     <PageBackground>
-      <PageRouter />
+      <PageHeader />
     </PageBackground>
   )
 }
