@@ -8,6 +8,7 @@ import PageRouters from './PageRouters'
 const PageHeaderLeftBox = styled(Box)({
   display: 'flex',
   alignItems: 'center',
+  height: '64px',
 })
 
 
