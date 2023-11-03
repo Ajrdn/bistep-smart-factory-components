@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Root from './Root'
+import App from 'App'
 import Melting from './Melting/Melting'
 import Element from './Element/Element'
 import Dashboard from './Dashboard/Dashboard'
@@ -11,36 +12,47 @@ import Admin from './Admin/Admin'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    index: true,
+    path: '/login',
     element: <Root />,
   },
   {
-    path: '/melting',
-    element: <Melting />,
-  },
-  {
-    path: '/element',
-    element: <Element />,
-  },
-  {
-    path: '/dashboard',
-    element: <Dashboard />,
-  },
-  {
-    path: '/processOrder',
-    element: <ProcessOrder />,
-  },
-  {
-    path: '/processPlanner',
-    element: <ProcessPlanner />,
-  },
-  {
-    path: '/processList',
-    element: <ProcessList />,
-  },
-  {
-    path: '/admin',
-    element: <Admin />,
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <ProcessOrder />,
+      },
+      {
+        path: '/processOrder',
+        element: <ProcessOrder />,
+      },
+      {
+        path: '/processPlanner',
+        element: <ProcessPlanner />,
+      },
+      {
+        path: '/processList',
+        element: <ProcessList />,
+      },
+      {
+        path: '/admin',
+        element: <Admin />,
+      },
+      {
+        path: '/melting',
+        element: <Melting />,
+      },
+      {
+        path: '/element',
+        element: <Element />,
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard />,
+      },
+    ],
   },
 ])
 
