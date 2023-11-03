@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { styled } from '@mui/material/styles'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
+import { useNavigate } from 'react-router-dom'
 
 
 const PageRouterTabs = styled(Tabs)({
@@ -29,47 +30,49 @@ const PageRouterTab = styled(Tab)({
 
 interface PageRouter {
   pageName: string
-  index: number
+  url: string
 }
 
 
 function PageRouters() {
-  const [index, setIndex] = useState<number>(0)
+  const navigate = useNavigate()
+
+  const [url, setUrl] = useState<string>('/processOrder')
 
   const pageRouterList: PageRouter[] = [
     {
       pageName: '작업지시서',
-      index: 0,
+      url: '/processOrder',
     },
     {
       pageName: '작업계획서',
-      index: 1,
+      url: '/processPlanner',
     },
     {
       pageName: '작업목록',
-      index: 2,
+      url: '/processList',
     },
     {
       pageName: '사용자 관리',
-      index: 3,
+      url: '/admin',
     },
   ]
 
-  const indexChange = (event: React.SyntheticEvent, newIndex: number) => {
-    console.log(newIndex)
-    setIndex(newIndex)
+  const urlChange = (event: React.SyntheticEvent, newUrl: string) => {
+    setUrl(newUrl)
+    navigate(newUrl)
   }
 
   return (
     <PageRouterTabs
-      value={index}
-      onChange={indexChange}
+      value={url}
+      onChange={urlChange}
     >
       {pageRouterList.map(pageRouter => (
         <PageRouterTab
           key={pageRouter.pageName}
           label={pageRouter.pageName}
-          value={pageRouter.index}
+          value={pageRouter.url}
         />
       ))}
     </PageRouterTabs>
