@@ -5,7 +5,7 @@ import PageRouterButtonBox from './PageRouterButtonBox'
 
 
 const PageHeaderRightBox = styled(Box)({
-  width: '332px',
+  width: '362px',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
