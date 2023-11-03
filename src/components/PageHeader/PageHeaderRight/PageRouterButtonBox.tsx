@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import PageRouterButton, { PageRouterButtonProps } from './PageRouterButton'
@@ -11,6 +12,7 @@ const ButtonBox = styled(Box)({
 
 
 function PageRouterButtonBox() {
+  const navigate = useNavigate()
   const [activatedMelting, setActivatedMelting] = useState<boolean>(false)
   const [activatedElement, setActivatedElement] = useState<boolean>(false)
 
@@ -21,6 +23,7 @@ function PageRouterButtonBox() {
       router: () => {
         setActivatedMelting(true)
         setActivatedElement(false)
+        navigate('/melting')
       },
     },
     {
@@ -29,6 +32,7 @@ function PageRouterButtonBox() {
       router: () => {
         setActivatedMelting(false)
         setActivatedElement(true)
+        navigate('/element')
       },
     },
   ]
