@@ -37,6 +37,7 @@ function PageRouterButtonBox() {
     <ButtonBox>
       {pageRouterButtons.map(pageRouterButton => (
         <PageRouterButton
+          key={pageRouterButton.name}
           name={pageRouterButton.name}
           activated={pageRouterButton.activated}
           router={pageRouterButton.router}
