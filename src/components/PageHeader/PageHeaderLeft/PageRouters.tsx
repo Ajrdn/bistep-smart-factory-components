@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { styled } from '@mui/material/styles'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
-import { useNavigate } from 'react-router-dom'
 
 
 const PageRouterTabs = styled(Tabs)({
@@ -32,7 +32,7 @@ interface PageRouter {
   pageName: string
   url: string
 }
-
+  
 
 function PageRouters() {
   const navigate = useNavigate()
