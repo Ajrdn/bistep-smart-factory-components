@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import PageRouterButton, { PageRouterButtonProps } from './PageRouterButton'
@@ -13,25 +13,20 @@ const ButtonBox = styled(Box)({
 
 function PageRouterButtonBox() {
   const navigate = useNavigate()
-  const [activatedMelting, setActivatedMelting] = useState<boolean>(false)
-  const [activatedElement, setActivatedElement] = useState<boolean>(false)
+  const location = useLocation()
 
   const pageRouterButtons: PageRouterButtonProps[] = [
     {
       name: '용해',
-      activated: activatedMelting,
+      activated: location.pathname === '/melting',
       router: () => {
-        setActivatedMelting(true)
-        setActivatedElement(false)
         navigate('/melting')
       },
     },
     {
       name: '성분',
-      activated: activatedElement,
+      activated: location.pathname === '/element',
       router: () => {
-        setActivatedMelting(false)
-        setActivatedElement(true)
         navigate('/element')
       },
     },
