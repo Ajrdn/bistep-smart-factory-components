@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { styled } from '@mui/material/styles'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
@@ -32,12 +32,13 @@ interface PageRouter {
   pageName: string
   url: string
 }
-  
+
 
 function PageRouters() {
   const navigate = useNavigate()
+  const location = useLocation()
 
-  const [url, setUrl] = useState<string>('/processorder')
+  const [url, setUrl] = useState<string>(location.pathname)
 
   const pageRouterList: PageRouter[] = [
     {
@@ -58,9 +59,13 @@ function PageRouters() {
     },
   ]
 
+  useEffect(() => {
+    setUrl(location.pathname)
+  }, [location.pathname])
+
   const urlChange = (event: React.SyntheticEvent, newUrl: string) => {
-    setUrl(newUrl)
     navigate(newUrl)
+    setUrl(newUrl)
   }
 
   return (
