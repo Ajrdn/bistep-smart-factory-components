@@ -4,15 +4,15 @@ import Button from '@mui/material/Button'
 
 
 interface RouterButtonProps {
-  activated: boolean
+  activated: string
 }
 
 
 const RouterButton = styled(Button)<RouterButtonProps>(({ activated }) => ({
   width: '76px',
   height: '40px',
-  color: activated ? '#90CAF9' : '#FFFFFF',
-  border: `1px solid ${activated ? '#90CAF9' : '#FFFFFF'}`,
+  color: activated,
+  border: `1px solid ${activated}`,
   borderRadius: '5px',
   fontSize: '15px',
   fontFamily: 'Pretendard',
@@ -30,7 +30,7 @@ export interface PageRouterButtonProps {
 function PageRouterButton(props: PageRouterButtonProps) {
   return (
     <RouterButton
-      activated={props.activated}
+      activated={props.activated ? '#90CAF9' : '#FFFFFF'}
       onClick={props.router}
     >
       {props.name}
