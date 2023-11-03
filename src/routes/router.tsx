@@ -21,15 +21,15 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/processOrder',
+        path: '/processorder',
         element: <ProcessOrder />,
       },
       {
-        path: '/processPlanner',
+        path: '/processplanner',
         element: <ProcessPlanner />,
       },
       {
-        path: '/processList',
+        path: '/processlist',
         element: <ProcessList />,
       },
       {

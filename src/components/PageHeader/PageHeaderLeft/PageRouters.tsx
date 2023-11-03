@@ -37,20 +37,20 @@ interface PageRouter {
 function PageRouters() {
   const navigate = useNavigate()
 
-  const [url, setUrl] = useState<string>('/processOrder')
+  const [url, setUrl] = useState<string>('/processorder')
 
   const pageRouterList: PageRouter[] = [
     {
       pageName: '작업지시서',
-      url: '/processOrder',
+      url: '/processorder',
     },
     {
       pageName: '작업계획서',
-      url: '/processPlanner',
+      url: '/processplanner',
     },
     {
       pageName: '작업목록',
-      url: '/processList',
+      url: '/processlist',
     },
     {
       pageName: '사용자 관리',
