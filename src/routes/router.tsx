@@ -13,17 +13,13 @@ import Admin from './Admin/Admin'
 const router = createBrowserRouter([
   {
     index: true,
-    path: '/login',
+    path: '/',
     element: <Root />,
   },
   {
     path: '/',
     element: <App />,
     children: [
-      {
-        path: '/',
-        element: <ProcessOrder />,
-      },
       {
         path: '/processOrder',
         element: <ProcessOrder />,
