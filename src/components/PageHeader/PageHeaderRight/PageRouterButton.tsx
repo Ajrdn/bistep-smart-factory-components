@@ -12,8 +12,11 @@ const RouterButton = styled(Button)<RouterButtonProps>(({ activated }) => ({
   width: '76px',
   height: '40px',
   color: activated ? '#90CAF9' : '#FFFFFF',
-  borderColor: activated ? '#90CAF9' : '#FFFFFF',
+  border: `1px solid ${activated ? '#90CAF9' : '#FFFFFF'}`,
   borderRadius: '5px',
+  fontSize: '15px',
+  fontFamily: 'Pretendard',
+  fontWeight: 500,
 }))
 
 
@@ -30,7 +33,7 @@ function PageRouterButton(props: PageRouterButtonProps) {
       activated={props.activated}
       onClick={props.router}
     >
-      {props.activated}
+      {props.name}
     </RouterButton>
   )
 }
