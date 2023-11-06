@@ -7,6 +7,7 @@ import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
+import useAlarmModalStore from 'store/useAlarmModalStore'
 
 
 export const ProfileIcon = styled(Avatar)({
@@ -84,6 +85,8 @@ interface UserProfileBoxProps {
 function UserProfileBox(props: UserProfileBoxProps) {
   const navigate = useNavigate()
 
+  const setOpen = useAlarmModalStore(state => state.setOpen)
+
   const profileName = useUserStore(state => state.profileName)
   const name = useUserStore(state => state.name)
   const position = useUserStore(state => state.position)
@@ -94,7 +97,7 @@ function UserProfileBox(props: UserProfileBoxProps) {
   }
 
   const sendAlarm = () => {
-    
+    setOpen()
   }
 
   return (
