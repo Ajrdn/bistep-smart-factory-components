@@ -12,6 +12,9 @@ export const theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
+          [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
+            border: '1px solid #C8C8C8',
+          },
           [`&.Mui-focused .${outlinedInputClasses.notchedOutline}`]: {
             border: '1px solid #C8C8C8',
           },
