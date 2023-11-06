@@ -98,6 +98,7 @@ function UserProfileBox(props: UserProfileBoxProps) {
 
   const sendAlarm = () => {
     setOpen()
+    props.onClose()
   }
 
   return (
