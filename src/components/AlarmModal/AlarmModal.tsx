@@ -39,7 +39,10 @@ function AlarmModal() {
   }
 
   return (
-    <ModalBackground open={open} onClose={setClose}>
+    <ModalBackground
+      open={open}
+      onClose={setClose}
+    >
       <AlarmModalContentBox>
         <AlarmModalTitle>알림 보내기</AlarmModalTitle>
         <AlarmModalTitleField />
