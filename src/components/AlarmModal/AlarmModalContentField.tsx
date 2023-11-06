@@ -35,7 +35,7 @@ const ContentTextField = styled(TextField)({
     fontSize: '16px',
     fontFamily: 'Pretendard',
     fontWeight: 400,
-    color: '#C8C8C8',
+    color: '#13243A',
   },
 })
 

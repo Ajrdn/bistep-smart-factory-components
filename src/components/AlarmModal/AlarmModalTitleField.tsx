@@ -17,7 +17,7 @@ const TitleField = styled(TextField)({
     fontSize: '18px',
     fontFamily: 'Pretendard',
     fontWeight: 600,
-    color: '#C8C8C8',
+    color: '#13243A',
   },
 })
 
