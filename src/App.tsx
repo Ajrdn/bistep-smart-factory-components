@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import PageHeader from './components/PageHeader/PageHeader'
+import AlarmModal from 'components/AlarmModal/AlarmModal'
 
 
 const PageBackground = styled(Box)({
@@ -16,10 +17,13 @@ const PageBackground = styled(Box)({
 
 function App() {
   return (
-    <PageBackground>
-      <PageHeader />
-      <Outlet />
-    </PageBackground>
+    <>
+      <PageBackground>
+        <PageHeader />
+        <Outlet />
+      </PageBackground>
+      <AlarmModal />
+    </>
   )
 }
 
