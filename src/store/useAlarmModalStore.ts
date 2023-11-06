@@ -26,11 +26,11 @@ const useAlarmModalStore = create<useAlarmModalState>(set => ({
 
   setOpen: () => set(state => ({open: !state.open})),
 
-  setTitle: newTitle => set(state => ({title: newTitle})),
+  setTitle: newTitle => set({title: newTitle}),
 
-  setContent: newContent => set(state => ({content: newContent})),
+  setContent: newContent => set({content: newContent}),
 
-  setTarget: newTarget => set(state => ({target: newTarget})),
+  setTarget: newTarget => set({target: newTarget}),
 }))
 
 export default useAlarmModalStore
