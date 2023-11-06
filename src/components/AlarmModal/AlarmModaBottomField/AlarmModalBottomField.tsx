@@ -1,8 +1,8 @@
 import React from 'react'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
-import BottomSelect from './BottomSelect'
-import BottomButton from './BottomButton'
+import AlarmModalBottomSelect from './AlarmModalBottomSelect'
+import AlarmModalBottomButton from './AlarmModalBottomButton'
 
 
 const BottomFieldBox = styled(Box)({
@@ -17,8 +17,8 @@ const BottomFieldBox = styled(Box)({
 function AlarmModalBottomField() {
   return (
     <BottomFieldBox>
-      <BottomSelect />
-      <BottomButton />
+      <AlarmModalBottomSelect />
+      <AlarmModalBottomButton />
     </BottomFieldBox>
   )
 }
