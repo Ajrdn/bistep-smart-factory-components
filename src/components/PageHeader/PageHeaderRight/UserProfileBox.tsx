@@ -29,7 +29,8 @@ const ProfileBox = styled(Modal)({
 
 const ProfileBoxContent = styled(Box)({
   width: '119px',
-  height: '165px',
+  minHeight: '165px',
+  padding: '20px 0',
   backgroundColor: '#F2F2F2',
   boxShadow: '0px 0px 3px #00000052',
   borderRadius: '19px',
@@ -73,6 +74,7 @@ const LogoutButton = styled(ProfileButton)({
 
 const AlarmButton = styled(ProfileButton)({
   padding: '1px 10px',
+  marginTop: '20px',
 })
 
 
